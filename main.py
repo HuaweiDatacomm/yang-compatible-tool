@@ -723,8 +723,7 @@ def static(path):
 if __name__ == '__main__':
     port = 8080
 
-    parser = argparse.ArgumentParser(description='A YANG fetching, extracting and validating web application.')
-    parser.add_argument('-p', '--port', dest='port', type=int, help='Port to listen to (default is 8080)')
+
     parser.add_argument('-d', '--data_dir', dest='data_dir', help='Path to user data')
     parser.add_argument('-c', '--config_dir', dest='config_dir', help='Path to user data')
     args = parser.parse_args()
@@ -743,4 +742,4 @@ if __name__ == '__main__':
 
     versions = {"pyang_version": pyang.__version__}
 
-    run(server='cherrypy', host='0.0.0.0', port=port)
+    run(server='cherrypy')
