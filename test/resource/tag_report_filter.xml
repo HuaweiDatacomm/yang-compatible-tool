@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<white-box-filter tag = "tag-name">
+	<common-filter>
+		<filename-filter>
+			<reg-match>
+				<match>huawei-aaa*</match>
+				<match>openconfig*</match>
+				<match>ietf-*</match>
+			</reg-match>
+		</filename-filter>
+		<errorinfo-filter>
+			<reg-match>
+				<!-- 如果 * 在第一个，需要加 . 进行转义 -->
+				<match>.*must have a "description" substatement*</match>
+				<match>.*must have a 'description' substatement*</match>
+				<match>.*must have a 'reference' substatement*</match>
+				<match>.*must have a "reference" substatement*</match>
+			</reg-match>
+		</errorinfo-filter>
+	</common-filter>
+	<filter-items>
+		<filter-item tool-name = "pyang" >
+			<filename-filter>
+				<reg-match>
+					<match>huawei-aaa*</match>
+					<match>openconfig*</match>
+					<match>ietf-*</match>
+				</reg-match>
+			</filename-filter>
+			<errorinfo-filter>
+				<reg-match>
+					<match>.*must have a "description" substatement*</match>
+					<match>.*must have a 'description' substatement*</match>
+					<match>.*must have a "reference" substatement*</match>
+					<match>.*must have a 'reference' substatement*</match>
+					<match>.*bbbb*</match>
+				</reg-match>
+			</errorinfo-filter>
+		</filter-item>
+		<filter-item tool-name = "confd" >
+			<filename-filter>
+				<reg-match>
+					<match>huawei-aaa*</match>
+					<match>openconfig*</match>
+					<match>ietf-*</match>
+				</reg-match>
+			</filename-filter>
+			<errorinfo-filter>
+				<reg-match>
+					<match>.*must have a "description" substatement*</match>
+					<match>.*must have a 'description' substatement*</match>
+					<match>.*must have a "reference" substatement*</match>
+					<match>.*must have a 'reference' substatement*</match>
+					<match>.*ccccc*</match>
+				</reg-match>
+			</errorinfo-filter>
+		</filter-item>
+		<filter-item tool-name = "yanglint" >
+			<filename-filter>
+				<reg-match>
+					<match>huawei-aaa*</match>
+					<match>openconfig*</match>
+					<match>ietf-*</match>
+				</reg-match>
+			</filename-filter>
+			<errorinfo-filter>
+				<reg-match>
+					<match>.*must have a "description" substatement*</match>
+					<match>.*must have a 'description' substatement*</match>
+					<match>.*must have a "reference" substatement*</match>
+					<match>.*must have a 'reference' substatement*</match>
+				</reg-match>
+			</errorinfo-filter>
+		</filter-item>
+		<filter-item tool-name = "huaweiCheck" >
+			<filename-filter>
+				<reg-match>
+					<match>huawei-aaa*</match>
+					<match>openconfig*</match>
+					<match>ietf-*</match>
+				</reg-match>
+			</filename-filter>
+			<errorinfo-filter>
+				<reg-match>
+					<match>.*must have a "description" substatement*</match>
+					<match>.*must have a 'description' substatement*</match>
+					<match>.*must have a "reference" substatement*</match>
+					<match>.*must have a 'reference' substatement*</match>
+				</reg-match>
+			</errorinfo-filter>
+		</filter-item>
+		<filter-item tool-name = "yanger" >
+			<filename-filter>
+				<reg-match>
+					<match>huawei-aaa*</match>
+					<match>openconfig*</match>
+					<match>ietf-*</match>
+				</reg-match>
+			</filename-filter>
+			<errorinfo-filter>
+				<reg-match>
+					<match>.*must have a "description" substatement*</match>
+					<match>.*must have a 'description' substatement*</match>
+					<match>.*must have a "reference" substatement*</match>
+					<match>.*must have a 'reference' substatement*</match>
+				</reg-match>
+			</errorinfo-filter>
+		</filter-item>
+	</filter-items>
+
+</white-box-filter>
